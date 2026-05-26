@@ -1,35 +1,48 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lista de tarefas</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+<!doctype html>
+<html lang="pt-BR" data-theme="white">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de tarefas</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="flex">
+        <h1>📋 Liasta de tarefas</h1>
+        <button class="toggle_theme-btn" id="toggleTheme" type="button">
+          <ion-icon  class="icon" name="moon-outline"></ion-icon>
+        </button>
+      </div>
 
-  <div class="container">
-    <h1>📋 Liasta de tarefas</h1>
+      <div class="input-area">
+        <input type="text" id="taskInput" placeholder="Digite uma tarefa..." />
+        <button id="addTaskBtn">Adicionar</button>
+      </div>
 
-    <div class="input-area">
-      <input type="text" id="taskInput" placeholder="Digite uma tarefa..." />
-      <button id="addTaskBtn">Adicionar</button>
+      <div class="filters">
+        <button class="filter active" data-filter="all">Todas</button>
+        <button class="filter" data-filter="pending">Pendentes</button>
+        <button class="filter" data-filter="completed">Concluídas</button>
+      </div>
+
+      <ul id="taskList"></ul>
+
+      <div class="footer">
+        <span id="taskCounter">0 tarefas</span>
+        <button id="clearCompleted">Limpar concluídas</button>
+      </div>
     </div>
 
-    <div class="filters">
-      <button class="filter active" data-filter="all">Todas</button>
-      <button class="filter" data-filter="pending">Pendentes</button>
-      <button class="filter" data-filter="completed">Concluídas</button>
-    </div>
-
-    <ul id="taskList"></ul>
-
-    <div class="footer">
-      <span id="taskCounter">0 tarefas</span>
-      <button id="clearCompleted">Limpar concluídas</button>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="./toggleTheme.js"></script>
+  </body>
 </html>
