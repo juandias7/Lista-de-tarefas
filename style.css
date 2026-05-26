@@ -5,151 +5,29 @@
   font-family: Arial, sans-serif;
 }
 
-/* =========================
-   LIGHT THEME (DEFAULT)
-========================= */
-
-:root {
-  --body-gradient: linear-gradient(135deg, #1e3c72, #2a5298);
-
-  --container-bg: white;
-
-  --title-color: #1e3c72;
-
-  --toggle-btn-bg: #3f6fc2;
-  --toggle-btn-color: white;
-
-  --input-border: #ddd;
-  --input-bg: white;
-  --input-color: #111;
-
-  --primary-btn-bg: #1e3c72;
-  --primary-btn-hover: #16305b;
-  --primary-btn-color: white;
-
-  --filter-bg: #eee;
-  --filter-color: #111;
-
-  --filter-active-bg: #1e3c72;
-  --filter-active-color: white;
-
-  --task-bg: #f4f4f4;
-  --task-color: #111;
-
-  --delete-btn-bg: crimson;
-  --delete-btn-color: white;
-
-  --footer-btn-bg: #444;
-  --footer-btn-color: white;
-
-  --shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-/* =========================
-   DARK THEME
-========================= */
-
-[data-theme="dark"] {
-  --body-gradient: linear-gradient(135deg, #0f172a, #1e293b);
-
-  --container-bg: #1e293b;
-
-  --title-color: #f8fafc;
-
-  --toggle-btn-bg: #334155;
-  --toggle-btn-color: white;
-
-  --input-border: #475569;
-  --input-bg: #0f172a;
-  --input-color: #f8fafc;
-
-  --primary-btn-bg: #2563eb;
-  --primary-btn-hover: #1d4ed8;
-  --primary-btn-color: white;
-
-  --filter-bg: #334155;
-  --filter-color: #f8fafc;
-
-  --filter-active-bg: #2563eb;
-  --filter-active-color: white;
-
-  --task-bg: #0f172a;
-  --task-color: #f8fafc;
-
-  --delete-btn-bg: #dc2626;
-  --delete-btn-color: white;
-
-  --footer-btn-bg: #334155;
-  --footer-btn-color: white;
-
-  --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-}
-
-/* =========================
-   GLOBAL
-========================= */
-
 body {
-  background: var(--body-gradient);
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
-  transition: background 0.3s ease;
 }
 
 .container {
-  background: var(--container-bg);
+  background: white;
   width: 100%;
   max-width: 500px;
   border-radius: 20px;
   padding: 30px;
-  box-shadow: var(--shadow);
-  transition: all 0.3s ease;
-}
-
-.flex {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
 h1 {
-  color: var(--title-color);
-  transition: color 0.3s ease;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #1e3c72;
 }
-
-/* =========================
-   TOGGLE BUTTON
-========================= */
-
-.toggle_theme-btn {
-  border-radius: 10px;
-  padding: 0.8rem;
-  border: none;
-  background-color: var(--toggle-btn-bg);
-  color: var(--toggle-btn-color);
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-
-.toggle_theme-btn .icon {
-  padding: 0;
-  margin: 0;
-  font-size: 1.2rem;
-}
-
-.toggle_theme-btn:hover {
-  filter: brightness(115%);
-  transform: scale(1.1);
-}
-
-/* =========================
-   INPUT AREA
-========================= */
 
 .input-area {
   display: flex;
@@ -160,35 +38,27 @@ h1 {
 .input-area input {
   flex: 1;
   padding: 12px;
-  border: 2px solid var(--input-border);
+  border: 2px solid #ddd;
   border-radius: 10px;
   font-size: 16px;
-  background-color: var(--input-bg);
-  color: var(--input-color);
-  transition: all 0.3s ease;
-}
-
-.input-area input::placeholder {
-  color: gray;
 }
 
 .input-area button {
   padding: 12px 18px;
   border: none;
-  background: var(--primary-btn-bg);
-  color: var(--primary-btn-color);
+  background: #1e3c72;
+  color: white;
   border-radius: 10px;
   cursor: pointer;
   transition: 0.3s;
 }
 
 .input-area button:hover {
-  background: var(--primary-btn-hover);
+  background: #16305b;
 }
 
 /* =========================
    FILTERS
-======================== */
 
 .filters {
   display: flex;
@@ -202,19 +72,14 @@ h1 {
   padding: 8px 14px;
   border-radius: 8px;
   cursor: pointer;
-  background: var(--filter-bg);
-  color: var(--filter-color);
+  background: #eee;
   transition: 0.3s;
 }
 
 .filter.active {
-  background: var(--filter-active-bg);
-  color: var(--filter-active-color);
+  background: #1e3c72;
+  color: white;
 }
-
-/* =========================
-   TASKS
-========================= */
 
 #taskList {
   list-style: none;
@@ -224,13 +89,11 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--task-bg);
-  color: var(--task-color);
+  background: #f4f4f4;
   padding: 12px;
   border-radius: 10px;
   margin-bottom: 10px;
   animation: fadeIn 0.3s ease;
-  transition: all 0.3s ease;
 }
 
 .task.completed span {
@@ -246,16 +109,12 @@ h1 {
 
 .task button {
   border: none;
-  background: var(--delete-btn-bg);
-  color: var(--delete-btn-color);
+  background: crimson;
+  color: white;
   padding: 8px 10px;
   border-radius: 8px;
   cursor: pointer;
 }
-
-/* =========================
-   FOOTER
-========================= */
 
 .footer {
   margin-top: 20px;
@@ -266,23 +125,17 @@ h1 {
 
 .footer button {
   border: none;
-  background: var(--footer-btn-bg);
-  color: var(--footer-btn-color);
+  background: #444;
+  color: white;
   padding: 10px 14px;
   border-radius: 8px;
   cursor: pointer;
 }
-
-/* =========================
-   ANIMATION
-========================= */
-
 @keyframes fadeIn {
   from {
     opacity: 0;
     transform: translateY(-5px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
