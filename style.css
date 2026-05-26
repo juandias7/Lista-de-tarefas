@@ -138,3 +138,37 @@ h1 {
     transform: translateY(0);
   }
 }
+
+.top-info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.top-info p {
+  color: #555;
+  font-size: 15px;
+}
+
+.container:hover {
+  transform: scale(1.01);
+  transition: 0.3s;
+}
+
+.task:hover {
+  transform: translateX(5px);
+  transition: 0.2s;
+}
+
+.input-area input:focus {
+  outline: none;
+  border-color: #1e3c72;
+  box-shadow: 0 0 8px rgba(30,60,114,0.3);
+}
+
+.footer button:hover,
+.task button:hover,
+.filter:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+  transition: 0.2s;
+}
